@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGAS Sites</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    background:#000;
+    overflow:auto;
+    min-height:100vh;
+    color:#ddd;
+}
+
+/* Star Background */
+.stars{
+    position:fixed;
+    inset:0;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px,#fff,transparent),
+        radial-gradient(1.5px 1.5px at 80px 150px,#fff,transparent),
+        radial-gradient(2px 2px at 170px 70px,#fff,transparent),
+        radial-gradient(1.5px 1.5px at 250px 220px,#fff,transparent),
+        radial-gradient(2px 2px at 340px 120px,#fff,transparent),
+        radial-gradient(1.5px 1.5px at 430px 260px,#fff,transparent),
+        radial-gradient(2px 2px at 520px 40px,#fff,transparent),
+        radial-gradient(1.5px 1.5px at 610px 180px,#fff,transparent),
+        radial-gradient(2px 2px at 700px 80px,#fff,transparent),
+        radial-gradient(1.5px 1.5px at 790px 240px,#fff,transparent),
+        radial-gradient(2px 2px at 880px 120px,#fff,transparent),
+        radial-gradient(1.5px 1.5px at 970px 60px,#fff,transparent),
+        radial-gradient(2px 2px at 1060px 220px,#fff,transparent),
+        radial-gradient(1.5px 1.5px at 1150px 100px,#fff,transparent);
+    background-size:250px 250px;
+    animation:twinkle 5s infinite alternate;
+    z-index:1;
+    pointer-events:none;
+}
+
+@keyframes twinkle{
+    from{opacity:.7;}
+    to{opacity:1;}
+}
+
+/* Shooting Stars */
+.shooting-star{
+    position:absolute;
+    width:180px;
+    height:2px;
+    background:linear-gradient(to right,#fff,transparent);
+    border-radius:50%;
+    transform:rotate(-35deg);
+    animation:shoot linear infinite;
+    z-index:2;
+}
+
+.shooting-star::before{
+    content:"";
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:#fff;
+    border-radius:50%;
+    left:-4px;
+    top:-3px;
+    box-shadow:0 0 12px white;
+}
+
+.s1{top:8%;left:-20%;animation-duration:5s;animation-delay:0s;}
+.s2{top:30%;left:-35%;animation-duration:7s;animation-delay:2s;}
+.s3{top:55%;left:-25%;animation-duration:6s;animation-delay:4s;}
+.s4{top:75%;left:-30%;animation-duration:8s;animation-delay:1s;}
+
+@keyframes shoot{
+    from{
+        transform:translateX(0) translateY(0) rotate(-35deg);
+        opacity:1;
+    }
+    to{
+        transform:translateX(1800px) translateY(600px) rotate(-35deg);
+        opacity:0;
+    }
+}
+
+/* Main Content */
+.container{
+    position:relative;
+    z-index:5;
+    padding:40px 20px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+h1{
+    color:#003b8e;
+    font-size:62px;
+    letter-spacing:4px;
+    text-align:center;
+    margin-bottom:50px;
+    text-shadow:0 0 18px rgba(0,59,142,.7);
+}
+
+.section {
+    margin-bottom:60px;
+}
+
+.section h2 {
+    color:#00aaff;
+    font-size:28px;
+    margin-bottom:20px;
+    text-align:center;
+    text-shadow:0 0 10px rgba(0,170,255,.5);
+    border-bottom:2px solid #003b8e;
+    padding-bottom:10px;
+}
+
+.links-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:15px;
+}
+
+.links-grid a {
+    text-decoration:none;
+}
+
+.link-btn {
+    display:block;
+    padding:18px 24px;
+    background:rgba(255,255,255,.06);
+    border:2px solid #003b8e;
+    color:#00ccff;
+    border-radius:16px;
+    font-size:17px;
+    transition:.3s;
+    text-align:center;
+    word-break:break-all;
+}
+
+.link-btn:hover {
+    background:#003b8e;
+    color:white;
+    transform:translateY(-6px);
+    box-shadow:0 0 25px rgba(0,59,142,.9);
+}
+
+.back-btn {
+    display:inline-block;
+    margin-bottom:30px;
+    padding:12px 28px;
+    background:rgba(255,255,255,.08);
+    border:2px solid #003b8e;
+    color:#fff;
+    border-radius:40px;
+    text-decoration:none;
+    font-size:18px;
+    transition:.25s;
+}
+
+.back-btn:hover {
+    background:#003b8e;
+    color:white;
+    transform:scale(1.05);
+}
+
+/* Footer note */
+.note {
+    text-align:center;
+    margin-top:60px;
+    color:#555;
+    font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="shooting-star s1"></div>
+<div class="shooting-star s2"></div>
+<div class="shooting-star s3"></div>
+<div class="shooting-star s4"></div>
+
+<div class="container">
+
+    <a href="https://sites.google.com/aacps.org/ugas/home" class="back-btn">← Back to UGAS Hub</a>
+
+    <h1>UGAS Sites</h1>
+
+    <!-- Tung Tung -->
+    <div class="section">
+        <h2>Tung Tung</h2>
+        <div class="links-grid">
+            <a href="https://mathhh.art-motel.com/" target="_blank" rel="noopener noreferrer"><div class="link-btn">mathhh.art-motel.com</div></a>
+            <a href="https://math.vcsalearning.org/" target="_blank" rel="noopener noreferrer"><div class="link-btn">math.vcsalearning.org</div></a>
+            <a href="https://olivia.tanenbaumchat.org/" target="_blank" rel="noopener noreferrer"><div class="link-btn">olivia.tanenbaumchat.org</div></a>
+        </div>
+    </div>
+
+    <!-- Frogies Arcade -->
+    <div class="section">
+        <h2>Frogies Arcade</h2>
+        <div class="links-grid">
+            <a href="https://1void-vision2.global.ssl.fastly.net/" target="_blank" rel="noopener noreferrer"><div class="link-btn">1void-vision2.global.ssl.fastly.net</div></a>
+            <a href="https://arcade.tantrum.rg/" target="_blank" rel="noopener noreferrer"><div class="link-btn">arcade.tantrum.rg</div></a>
+        </div>
+    </div>
+
+    <!-- Gn Math -->
+    <div class="section">
+        <h2>Gn Math</h2>
+        <div class="links-grid">
+            <a href="https://sites.google.com/aacps.org/gn-math/gn" target="_blank" rel="noopener noreferrer"><div class="link-btn">GN Math (Google Sites - Unblockable)</div></a>
+            <a href="https://mathematical.global.ssl.fastly.net/" target="_blank" rel="noopener noreferrer"><div class="link-btn">mathematical.global.ssl.fastly.net</div></a>
+            <a href="https://stocky.pythonanywhere.com/" target="_blank" rel="noopener noreferrer"><div class="link-btn">stocky.pythonanywhere.com</div></a>
+        </div>
+    </div>
+
+    <!-- Rosin -->
+    <div class="section">
+        <h2>Rosin</h2>
+        <div class="links-grid">
+            <a href="https://stillchasing.thuexetaxi.com/" target="_blank" rel="noopener noreferrer"><div class="link-btn">stillchasing.thuexetaxi.com</div></a>
+            <a href="https://internalsrror.hotelconsuladoinn.com/" target="_blank" rel="noopener noreferrer"><div class="link-btn">internalsrror.hotelconsuladoinn.com</div></a>
+            <a href="https://rosinisback.tantrum.org/" target="_blank" rel="noopener noreferrer"><div class="link-btn">rosinisback.tantrum.org</div></a>
+        </div>
+    </div>
+
+    <!-- Duckmath -->
+    <div class="section">
+        <h2>Duckmath</h2>
+        <div class="links-grid">
+            <a href="https://learn-duck.firebaseapp.com/" target="_blank" rel="noopener noreferrer"><div class="link-btn">learn-duck.firebaseapp.com</div></a>
+            <a href="https://d2gve52fz9syn8.cloudfront.net/" target="_blank" rel="noopener noreferrer"><div class="link-btn">d2gve52fz9syn8.cloudfront.net</div></a>
+            <a href="https://duckmathyes.tantrum.org/" target="_blank" rel="noopener noreferrer"><div class="link-btn">duckmathyes.tantrum.org</div></a>
+        </div>
+    </div>
+
+    <!-- Fern -->
+    <div class="section">
+        <h2>Fern</h2>
+        <div class="links-grid">
+            <a href="https://lsrelay-extension-production.s3.amazonaws.com/index.html" target="_blank" rel="noopener noreferrer"><div class="link-btn">lsrelay-extension-production.s3.amazonaws.com</div></a>
+            <a href="https://christensenkolby40.wixsite.com/xoxica-x/prxy" target="_blank" rel="noopener noreferrer"><div class="link-btn">christensenkolby40.wixsite.com (Xoxica)</div></a>
+            <a href="https://s3.amazonaws.com/glwithfinals/index.html" target="_blank" rel="noopener noreferrer"><div class="link-btn">glwithfinals S3</div></a>
+            <a href="https://s3.amazonaws.com/fstudentsareinventors/index.html" target="_blank" rel="noopener noreferrer"><div class="link-btn">fstudentsareinventors S3</div></a>
+            <a href="https://s3.amazonaws.com/macrolomath/index.html" target="_blank" rel="noopener noreferrer"><div class="link-btn">macrolomath S3</div></a>
+            <a href="https://s3.amazonaws.com/ilovemaths/index.html" target="_blank" rel="noopener noreferrer"><div class="link-btn">ilovemaths S3</div></a>
+            <a href="https://d1w7oj52hl4x53.cloudfront.net/" target="_blank" rel="noopener noreferrer"><div class="link-btn">d1w7oj52hl4x53.cloudfront.net</div></a>
+        </div>
+    </div>
+
+    <!-- Petezah -->
+    <div class="section">
+        <h2>Petezah</h2>
+        <div class="links-grid">
+            <a href="https://cdn.jsdelivr.net/gh/pineapple-petezah/homework@main/main.svg" target="_blank" rel="noopener noreferrer"><div class="link-btn">Petezah (jsDelivr)</div></a>
+            <a href="https://petezahgames5.firebaseapp.com/" target="_blank" rel="noopener noreferrer"><div class="link-btn">petezahgames5.firebaseapp.com</div></a>
+            <a href="https://codehs.com/uploads/0b54c1966feda9db6885a632dcd9031a" target="_blank" rel="noopener noreferrer"><div class="link-btn">Petezah Lite (CodeHS)</div></a>
+            <a href="https://pizzaisfood.tantrum.org/" target="_blank" rel="noopener noreferrer"><div class="link-btn">pizzaisfood.tantrum.org</div></a>
+        </div>
+    </div>
+
+    <!-- DogeUb -->
+    <div class="section">
+        <h2>DogeUb</h2>
+        <div class="links-grid">
+            <a href="https://instructure.storage.googleapis.com/index.html#/" target="_blank" rel="noopener noreferrer"><div class="link-btn">instructure.storage.googleapis.com</div></a>
+            <a href="https://d1v5dyshakfvq5.cloudfront.net/" target="_blank" rel="noopener noreferrer"><div class="link-btn">d1v5dyshakfvq5.cloudfront.net</div></a>
+            <a href="https://storage.googleapis.com/educationate/index.html" target="_blank" rel="noopener noreferrer"><div class="link-btn">educationate (Google Storage)</div></a>
+            <a href="https://bullisgoated.s3.amazonaws.com/index.html" target="_blank" rel="noopener noreferrer"><div class="link-btn">bullisgoated S3</div></a>
+        </div>
+    </div>
+
+    <!-- Noah's Tutoring Hub -->
+    <div class="section">
+        <h2>Noah's Tutoring Hub</h2>
+        <div class="links-grid">
+            <a href="https://unpkg.com/noahs-tutoring-hub@1.0.1/index.htm" target="_blank" rel="noopener noreferrer"><div class="link-btn">Noah's Tutoring Hub (unpkg)</div></a>
+            <a href="https://sites.google.com/aacps.org/noahs-tutoring-hub/noahs-tutoring" target="_blank" rel="noopener noreferrer"><div class="link-btn">Noah's Tutoring (Google Sites - Unblockable)</div></a>
+        </div>
+    </div>
+
+    <!-- More Categories (shortened for space) -->
+    <div class="section">
+        <h2>More Sites</h2>
+        <div class="links-grid">
+            <a href="https://ck.gen2.art-motel.com/" target="_blank" rel="noopener noreferrer"><div class="link-btn">Xylora</div></a>
+            <a href="https://stemy.beachlifeusa.com" target="_blank" rel="noopener noreferrer"><div class="link-btn">Truffled</div></a>
+            <a href="https://cdn.jsdelivr.net/npm/browselucide@latest/logo.svg#/" target="_blank" rel="noopener noreferrer"><div class="link-btn">Lucide</div></a>
+            <a href="https://cipher.beachlifeusa.com/" target="_blank" rel="noopener noreferrer"><div class="link-btn">Studyhub</div></a>
+            <a href="https://higuyswillycmadethis.onrender.com/games.html" target="_blank" rel="noopener noreferrer"><div class="link-btn">Interstellar</div></a>
+            <a href="https://googldotcom.global.ssl.fastly.net/" target="_blank" rel="noopener noreferrer"><div class="link-btn">Elite Gamez</div></a>
+            <a href="https://forschoolutopia.ilja.org/" target="_blank" rel="noopener noreferrer"><div class="link-btn">Utopia</div></a>
+            <a href="https://markspo.tantrum.org/" target="_blank" rel="noopener noreferrer"><div class="link-btn">Meximath/Neo</div></a>
+            <a href="https://cherryisfood.tantrum.org/onboarding/" target="_blank" rel="noopener noreferrer"><div class="link-btn">Cherri</div></a>
+            <a href="https://jordansmathwork.tantrum.org/" target="_blank" rel="noopener noreferrer"><div class="link-btn">Jordan's Math Work</div></a>
+            <a href="https://demon.azurewebsites.net/" target="_blank" rel="noopener noreferrer"><div class="link-btn">Demon</div></a>
+            <a href="https://gtube.global.ssl.fastly.net/" target="_blank" rel="noopener noreferrer"><div class="link-btn">GTube</div></a>
+            <a href="https://cloaked.tantrum.org/g.html" target="_blank" rel="noopener noreferrer"><div class="link-btn">Overcloacked</div></a>
+            <a href="https://strongdog.tantrum.org/" target="_blank" rel="noopener noreferrer"><div class="link-btn">Strongdog</div></a>
+            <a href="https://bestspark.onrender.com/" target="_blank" rel="noopener noreferrer"><div class="link-btn">Bestspark</div></a>
+        </div>
+    </div>
+
+    <div class="note">
+        Found on YouTube, Discord (Bull-33, Offensive Asian, etc.).<br>
+        Let me know if any get blocked — I'll help find replacements.
+    </div>
+
+</div>
+
+</body>
+</html>
